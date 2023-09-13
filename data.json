@@ -1,0 +1,73 @@
+[
+  {
+    "imageUrl": "games/2048/meta/apple-touch-icon.png",
+    "url": "games/2048/index.html",
+    "caption": "2048"
+  },
+  {
+    "imageUrl": "games/tictactoe/assets/favicon.png",
+    "url": "games/tictactoe/index.html",
+    "caption": "tic tac toe"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=231"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=12",
+    "url": "2048/index.html",
+    "caption": "2048"
+  },
+  {
+    "imageUrl": "games/tictactoe/assets/favicon.png",
+    "url": "games/tictactoe/index.html",
+    "caption": "tic tac toe"
+  },
+
+  {
+    "imageUrl": "2048/meta/apple-touch-icon.png",
+    "url": "2048/index.html",
+    "caption": "2048"
+  },
+  {
+    "imageUrl": "games/tictactoe/assets/favicon.png",
+    "url": "games/tictactoe/index.html",
+    "caption": "tic tac toe"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=231"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=231"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=12"
+  },
+  {
+    "imageUrl": "2048/meta/apple-touch-icon.png",
+    "url": "2048/index.html",
+    "caption": "2048"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=123"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=231"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=123"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=231"
+  },
+  {
+    "imageUrl": "2048/meta/apple-touch-icon.png",
+    "url": "2048/index.html",
+    "caption": "2048"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=123"
+  },
+  {
+    "imageUrl": "https://picsum.photos/500/500?random=231"
+  }
+]

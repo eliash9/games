@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta viewport="width=device-width, initial-scale=0.1">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .col {
+            flex: 1;
+
+            margin: 5px;
+            padding: 15px;
+            border-radius: 16px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /*sss*/
+        .masonry {
+            column-count: 3;
+            /* Adjust the number of columns as needed */
+            column-gap: 20px;
+            /* Adjust the gap between columns as needed */
+        }
+
+        .item {
+            break-inside: avoid-column;
+            margin-bottom: 20px;
+            /* Adjust the gap between items as needed */
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            /* Add a scale effect on hover */
+        }
+
+        .item a {
+            display: block;
+            /* Make the entire item clickable */
+            text-decoration: none;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        .item button {
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="masonry.css">
+</head>
+
+<body>
+    <!--div class="container">
+        <div class="row">
+
+            <a href="games/8ball/index.html" class="col">
+                <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png"
+                    srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png 2x"
+                    alt="Monkey Mart" loading="eager" decoding="async" width="314" height="314"
+                    class="sc-18mcksl-1 eoBBYj"></a>
+
+            <a href="/g/2048" class="col">
+                <picture class="sc-18mcksl-0 KeCrn">
+                    <source
+                        srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=408,height=408,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x"
+                        media="(min-width: 1871px)" width="204" height="204"><img
+                        src="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png"
+                        alt="2048"
+                        srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=188,height=188,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x"
+                        loading="eager" decoding="async" width="94" height="94" class="sc-18mcksl-1 eoBBYj">
+                </picture><span class="MHaP7Us7V6KqGxb8muHM global-cq-title">2048</span>
+            </a>
+            <a href="games/2048/index.html" class="col">
+
+            </a>
+            <a href="/g/2048" class="col">
+                <picture class="sc-18mcksl-0 KeCrn">
+                    <source
+                        srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=408,height=408,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x"
+                        media="(min-width: 1871px)" width="204" height="204"><img
+                        src="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png"
+                        alt="2048"
+                        srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=188,height=188,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x"
+                        loading="eager" decoding="async" width="94" height="94" class="sc-18mcksl-1 eoBBYj">
+                </picture><span class="MHaP7Us7V6KqGxb8muHM global-cq-title">2048</span>
+            </a>
+            <a href="games/angrybirds/game/index.html">
+                <div class="col">Angry Birds</div>
+            </a>
+            <a href="games/8ball/index.html" class="col">
+                <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png"
+                    srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png 2x"
+                    alt="Monkey Mart" loading="eager" decoding="async" width="314" height="314"
+                    class="sc-18mcksl-1 eoBBYj"></a>
+
+            <a href="games/flappybird/bird.html">
+                <div class="col">Flappy Bird</div>
+            </a>
+
+            <a href="games/idkkk/index.html">
+                <div class="col">I dont know</div>
+            </a>
+
+            <a href="games/minecraft-pokemon/minecraft.html">
+                <div class="col">Minecraft Pokemon</div>
+            </a>
+            <a href="games/8ball/index.html" class="col">
+                <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png"
+                    srcset="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=628,height=628,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png 2x"
+                    alt="Monkey Mart" loading="eager" decoding="async" width="314" height="314"
+                    class="sc-18mcksl-1 eoBBYj"></a>
+
+            <a href="games/minesweeper/mine.html">
+                <div class="col">minesweeper</div>
+            </a>
+
+            <a href="games/oldosu/index.html">
+                <div class="col">old osu!online</div>
+            </a>
+
+            <a href="games/osu!online/index.html">
+                <div class="col">osu!online</div>
+            </a>
+
+            <a href="games/racing/v4.final.html">
+                <div class="col">Racing</div>
+            </a>
+
+            <a href="games/tetris/tetris.html">
+                <div class="col"> Tetris</div>
+            </a>
+
+            <a href="games/tetris-but-better/tetris!.html">
+                <div class="col">Better Tetris</div>
+            </a>
+
+            <a href="games/tictactoe/index.html">
+                <div class="col">Tic Tac Toe</div>
+            </a>
+
+            <a href="games/tictactoe-master/tictactoe.xhtml">
+                <div class="col">Tic Tac Toe 2</div>
+            </a>
+
+            <a href="games/tower-chinese/index.html">
+                <div class="col"> Chinese Tower Game</div>
+            </a>
+
+        </div>
+    </div--->
+
+    <div class="container">
+        <div class="masonry">
+            <div class="item">
+                <a href="image1.jpg">
+                    <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png" alt="Image 1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=408,height=408,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x">
+                    <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=408,height=408,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x" alt="Image 2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image1.jpg">
+                    <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 1x, https://img.poki.com/cdn-cgi/image/quality=78,width=408,height=408,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png 2x" alt="Image 1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png">
+                    <img src="image2.jpg" alt="Image 2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image1.jpg">
+                    <img src="image1.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image2.jpg">
+                    <img src="https://img.poki.com/cdn-cgi/image/quality=78,width=204,height=204,fit=cover,f=auto/cb8c967c-4a78-4ffa-8506-cbac69746f4f.png" alt="Image 2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/b3668d7deb043d0f43b5813b0365be8f.png">
+                    <img src="image1.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image2.jpg">
+                    <img src="image2.jpg" alt="Image 2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image1.jpg">
+                    <img src="image1.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image2.jpg">
+                    <img src="image2.jpg" alt="Image 2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image1.jpg">
+                    <img src="image1.jpg" alt="Image 1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="image2.jpg">
+                    <img src="image2.jpg" alt="Image 2">
+                </a>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+
+    </div>
+
+    <!-- 
+  @author denim2x <denim2x@cyberdude.com>
+  @license MIT
+  
+  Pure-CSS Masonry layout, implemented via grid (http://mdn.io/grid);
+  all items are being nicely stacked vertically - thanks to 
+  `grid-auto-rows` and `grid-row: span ...`.
+
+  SUIT CSS compliant implementation.
+-->
+<header class="Header">
+    <h1 class="Header-title">CSS-grid Masonry layout</h1>
+  </header>
+  
+  <main class="Container">
+    <div class="Container-item">1</div>
+    <div class="Container-item">2</div>
+    <div class="Container-item">3</div>
+    <div class="Container-item">4</div>
+    <div class="Container-item">5</div>
+    <div class="Container-item">6</div>
+    <div class="Container-item">7</div>
+    <div class="Container-item">8</div>
+    <div class="Container-item">9</div>
+    <div class="Container-item">10</div>
+    <div class="Container-item">11</div>
+    <div class="Container-item">12</div>
+    <div class="Container-item">13</div>
+    <div class="Container-item">14</div>
+    <div class="Container-item">15</div>
+    <div class="Container-item">16</div>
+  </main>
+</body>
+
+</html>
